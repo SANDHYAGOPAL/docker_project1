@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <!-- <link rel="stylesheet" href="productstyle.css"> -->
+    <style>
+        * {
+    box-sizing: border-box;
+    color: white;
+  }
+  .bg-img{
+  background: url(https://img.freepik.com/free-photo/workplace-with-smartphone-laptop-black-table-top-view-copyspace-background_144627-24860.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+   
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+     /* background-image: url(https://media.istockphoto.com/id/1340937003/photo/machine-gears.webp?b=1&s=170667a&w=0&k=20&c=dExJsmph6vRvNP4SrFQo4LAysb5-VF_cmjGO0IsDuy0=);
+    background-repeat: no-repeat; */
+    /* background-size: cover; */
+      /* background-color: #7EC855;   */
+    font-family: 'Roboto', sans-serif;
+  }
+   .shopping-cart {
+    width: 750px;
+    height: 423px;
+    margin: 80px auto;
+    background: #FFFFFF;
+    box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
+    border-radius: 6px;
+   
+    display: flex;
+    flex-direction: column;
+  } 
+  .title {
+    text-align: center;
+    height: 60px;
+    border-bottom: 1px solid #E1E8EE;
+    padding: 20px 30px;
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .title2 {
+    
+    text-align: right;
+    height: 30px;
+    width: 70px;
+    /* border-bottom: 1px solid #E1E8EE; */
+    padding: 1px 600px;
+    color: rgb(247, 242, 242);
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .item {
+    padding: 20px 30px;
+    border-bottom: 1px solid #E1E8EE;
+    height: 120px;
+    display: flex;
+  }
+   
+  .item:nth-child(3) {
+    border-top:  1px solid #E1E8EE;
+    border-bottom:  1px solid #E1E8EE;
+  }
+  .buttons {
+    position: relative;
+    padding-top: 30px;
+    margin-right: 60px;
+  }
+  .delete-btn,
+  .like-btn {
+    display: inline-block;
+    Cursor: pointer;
+  }
+  .delete-btn {
+    width: 18px;
+    height: 17px;
+    background: url(&amp;quot;delete-icn.svg&amp;quot;) no-repeat center;
+  }
+   
+  .like-btn {
+    position: absolute;
+    top: 9px;
+    left: 15px;
+    background: url('twitter-heart.png');
+    width: 60px;
+    height: 60px;
+    background-size: 2900%;
+    background-repeat: no-repeat;
+  }
+  .is-active {
+    animation-name: animate;
+    animation-duration: .8s;
+    animation-iteration-count: 1;
+    animation-timing-function: steps(28);
+    animation-fill-mode: forwards;
+  }
+   
+  @keyframes animate {
+    0%   { background-position: left;  }
+    50%  { background-position: right; }
+    100% { background-position: right; }
+  }
+  .image {
+    margin-right: 50px;
+  }
+   
+ 
+  .description {
+    padding-top: 10px;
+    margin-right: 60px;
+    width: 115px;
+  }
+   
+  .description span {
+    display: block;
+    font-size: 14px;
+    color: #43484D;
+    font-weight: 400;
+  }
+   
+  .description span:first-child {
+    margin-bottom: 5px;
+  }
+  .description span:last-child {
+    font-weight: 300;
+    margin-top: 8px;
+    color: white;
+  }
+  .quantity {
+    padding-top: 20px;
+    margin-right: 60px;
+  }
+  .quantity input {
+    webkit-appearance: none;
+    border: none;
+    text-align: center;
+    width: 32px;
+    font-size: 16px;
+    color: white;
+    font-weight: 300;
+  }
+   
+  button[class*=btn] {
+    width: 30px;
+    height: 30px;
+    background-color: #E1E8EE;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+  }
+  .minus-btn img {
+    margin-bottom: 3px;
+  }
+  .plus-btn img {
+    margin-top: 2px;
+  }
+   
+  button:focus,
+  input:focus {
+    outline:0;
+  }
+  .total-price {
+    width: 83px;
+    
+    padding-top: 20px;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    font-weight: 300;
+  }
+  
+  
+  .total-price1 {
+    width: 83px;
+    padding-left: 17px;
+    padding-top: 5px;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    font-weight: 300;
+  }
+  @media (max-width: 800px) {
+    .shopping-cart {
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+    }
+    .item {
+      height: auto;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .image img {
+      width: 50%;
+    }
+    .image,
+    .quantity,
+    .description {
+      width: 100%;
+      text-align: center;
+      
+      margin: 6px 0;
+    }
+    .buttons {
+      margin-right: 20px;
+    }
+  }
+  a:hover {
+  background-color: lightskyblue;
+}
+img:hover{
+    background-color: skyblue;
+    size: 15px;
+}
+    </style>
+</head>
+<body>
+    <div class="bg-img">
+    
+    <!-- Title -->
+    <div class="title">
+       User: {{name}}
+      <span class="title2">
+        Services
+      </span>
+    </div>
+   
+   
+    <!-- Product #1 -->
+    <div class="item">
+      <div class="buttons">
+        <span class="delete-btn"></span>
+        <span class="like-btn"></span>
+      </div>
+   
+      <div class="image">
+        <a href="http://"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOnD614ZSrLMo1oM5jh-0H2LrzWXHQW5th5l-CjfDqpscwwQMEdzshSw6UxqzwGOXpVZk&usqp=CAU" alt="" width="60" height="70"/></a>
+        
+      </div>
+   
+      <div class="description">
+        <span><a href="http://" onclick="func('field1')">Advisor</a></span>
+        
+      </div>
+   
+      <div class="quantity">
+        Get personalized recommendations and best practices for Azure
+      </div>
+     &nbsp; &nbsp; 
+      <div class="total-price1"><input class="a4" type="button" id="field1" value={{advisor}} style="background-color: blue; padding: 15px 25px;"></div>
+    </div>
+   
+    <!-- Product #2 -->
+    <div class="item">
+        <div class="buttons">
+          <span class="delete-btn"></span>
+          <span class="like-btn"></span>
+        </div>
+     
+        <div class="image">
+          <img src="data:image/png;base64,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" alt="" width="60" height="70"/>
+        </div>
+     
+        <div class="description">
+          <span><a href="http://" onclick="func('field2')">Archive Storage</a></span>
+          
+        </div>
+     
+        <div class="quantity">
+            Store & manage rarely accessed data with locally redundant storage
+        </div>
+     
+        <div class="total-price"><input type="button" id="field2" value={{storage}} style="background-color: blue; padding: 15px 25px;"></div>
+      </div>
+   
+    <!-- Product #3 -->
+    <div class="item">
+        <div class="buttons">
+          <span class="delete-btn"></span>
+          <span class="like-btn"></span>
+        </div>
+     
+        <div class="image">
+          <img src="https://icons.veryicon.com/png/o/system/intelligent-log-management-platform-service/anomaly-detection.png" alt="" width="60" height="70"/>
+        </div>
+     
+        <div class="description">
+          <span><a href="http://" onclick="func('field3')">Anomaly Detector</a></span>
+          
+        </div>
+     
+        <div class="quantity">
+            Detect anomalies in data to quickly identify and troubleshoot issues.
+        </div>
+     
+        <div class="total-price"><input type="button" id="field3" value={{detector}} style="background-color: blue; padding: 15px 25px;"></div>
+      </div>
+
+ <!-- Product #4 -->
+ <div class="item">
+    <div class="buttons">
+      <span class="delete-btn"></span>
+      <span class="like-btn"></span>
+    </div>
+ 
+    <div class="image">
+      <img src="https://ms-azuretools.gallerycdn.vsassets.io/extensions/ms-azuretools/vscode-apimanagement/1.0.6/1683329913511/Microsoft.VisualStudio.Services.Icons.Default" alt="" width="60" height="70"/>
+    </div>
+ 
+    <div class="description">
+      <span><a href="http://" onclick="func('field4')">API Management</a></span>
+      
+    </div>
+ 
+    <div class="quantity">
+        Manage APIs across all platforms with a hybrid, multicloud platform.
+    </div>
+ 
+    <div class="total-price"><input type="button" id="field4" value={{manage}} style="background-color: blue; padding: 15px 25px;"></div>
+    <script>
+      function func(id) {
+        val = document.getElementById(id).value;
+        if (val == "Subscribe"){
+        alert("Please Subscribe");
+       }
+
+        else if (val == "canceled" || "paused" || "incomplete" ){
+          alert("unauthorized access");
+        }
+
+       
+        
+      }
+    </script>
+  </div>
+  </div>
+</body>
+</html>

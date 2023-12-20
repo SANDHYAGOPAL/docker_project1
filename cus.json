@@ -1,0 +1,53 @@
+{
+    "data" : [
+    {
+        "customerID":4000,
+        "name": "ram",
+        "password": 178,
+        "Product_&_Services": "Advisor",
+        "Description": "Get personalized recommendations and best practices for Azure",
+        "Type":"Management and governance",
+        "current_period_end": 1692853346,    
+        "current_period_start": 1690174946,
+        "collection_method": "charge_automatically", 
+        "subscription_status": "canceled"
+    },
+    {
+        "customerID":4001,
+        "name": "sam",
+        "password": 153,
+        "Product_&_Services": "Archive Storage",
+        "Description": "Store and manage rarely accessed data with locally redundant storage (LRS) or geo-redundant storage (GRS).",
+        "Type":"Archive Storage",
+        "collection_method": "charge_automatically",
+        "current_period_end": 1692853346,
+      "current_period_start": 1690174946,
+        "subscription_status": "paused"
+    },
+    {
+        "customerID":4002,
+        "name": "sita",
+        "password": 123,
+        
+        "Product_&_Services": "Anomaly Detector",
+        "Description": "Detect anomalies in data to quickly identify and troubleshoot issues.",
+        "Type":"AI + machine learning",
+        "collection_method": "charge_automatically",
+        "current_period_end": 1692853346,
+      "current_period_start": 1690174946,
+        "subscription_status": "active"
+    },
+    {
+        "customerID":4003,
+        "name": "john",
+        "password": 127,
+        "Product_&_Services": "API Management",
+        "Description": "Manage APIs across all platforms with a hybrid, multicloud platform.",
+        "Type":"Integration",
+        "collection_method": "charge_automatically",
+        "current_period_end": 1692853346,
+      "current_period_start": 1690174946,
+        "subscription_status": "incomplete"
+    }
+]
+}
